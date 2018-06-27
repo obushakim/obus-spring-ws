@@ -1,0 +1,4 @@
+LIST API :
+	-karyawan : 
+		contoh request: 
+			id = 1
