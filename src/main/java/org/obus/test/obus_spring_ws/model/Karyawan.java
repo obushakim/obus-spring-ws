@@ -15,8 +15,8 @@ public class Karyawan implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="karyawan_id")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="karyawan_id", updatable = false, nullable = false)
 	private int id;
 	
 	@Column(name="name")

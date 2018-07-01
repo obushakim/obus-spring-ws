@@ -17,6 +17,66 @@
         </xs:complexType>
     </xs:element>
     
+    <xs:element name="getAllKaryawanRequest">
+        <xs:complexType/>
+    </xs:element>
+    
+    <xs:element name="getAllKaryawanResponse">
+    	<xs:complexType>
+    		<xs:sequence>
+    			<xs:element maxOccurs="unbounded" name="karyawanList" type="tns:karyawanInfo"/>
+    		</xs:sequence>
+    	</xs:complexType>
+    </xs:element>
+    
+    <xs:element name="addKaryawanRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="karyawanInfo" type="tns:karyawanInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addKaryawanResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="responseStatus" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="updateKaryawanRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="karyawanInfo" type="tns:karyawanInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateKaryawanResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="responseStatus" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="removeKaryawanRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="removeKaryawanResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="responseStatus" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
     <xs:complexType name="karyawanInfo">
    		<xs:sequence>
    			<xs:element name="id" type="xs:int"/>
